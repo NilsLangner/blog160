@@ -5,7 +5,7 @@ Bei blog160 handelt es sich um ein "Spaßprojekt". Aufgabe war es eine Kombinati
 Wäre die Einschränkung der Nichtverwendung eines PHP-Frameworks nicht gewesen, so wäre dieses Projekt in einer sehr kurzen Zeit mit Hilfe von z.B. Symfony2 und Doctrine2 umzusetzen.
 
 #Installation
-Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach muss in der index.php die Passwörter für die Datenbank korrekt gesetzt werden. Danach sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das htdocs Verzeichnis zeigt.
+Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach muss in der index.php die Passwörter für die Datenbank korrekt gesetzt werden. Danach sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das htdocs Verzeichnis zeigt. Das System benötigt eine MySQL-Datenbank und PHP 5.3.
 
 #Potential
 Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstriche gemacht werden mussten. Ich habe versucht Dinge so zu implementieren, dass alle möglichen Verbesserungen noch "ohne" Umbau der Applikation zu integrieren sind. Einige Punkte, die für einen produktiven Einsatz dieser Software sind im folgenden Abschnitt aufgezählt:
