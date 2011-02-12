@@ -44,6 +44,8 @@ class Dispatcher
   /**
    * This function returns the rendered webpage.
    * 
+   * @todo improve error handling
+   * 
    * @return string the complete webpage
    */
   public function render()
