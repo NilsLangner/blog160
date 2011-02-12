@@ -1,7 +1,9 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>blog160 - Ein Projekt von Nils Langner</title>
-    <link type="text/css" rel="stylesheet" href="/css/blog160.css"/> 
+    <link type="text/css" rel="stylesheet" href="/css/blog160.css">
     <script type="text/javascript" src="/js/jquery/jquery-1.5.min.js"></script>
     <script type="text/javascript" src="/js/blog160.js"></script>
   </head>
@@ -11,7 +13,7 @@
     
       <div id="add_entry">
           <div id="add_entry_message">
-            Eintrag hinzuf&uuml;gen<input type="text" name="message" id="blog_entry" />
+            Eintrag hinzuf&uuml;gen<input type="text" name="message" id="blog_entry">
           </div>
           <button onclick="addEntry()">Eintrag erstellen</button>
           <div id="error_entry"></div>
@@ -24,7 +26,12 @@
           </div>
         <?php endforeach; ?>
       </div>
-    
+      <p>
+      <a href="http://validator.w3.org/check?uri=referer"><img
+         src="http://www.w3.org/Icons/valid-html401"
+         alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
+      </p>
     </div>
+    
   </body>
 </html>

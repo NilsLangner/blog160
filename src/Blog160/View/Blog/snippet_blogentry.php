@@ -4,7 +4,7 @@
 
   <div class="add_comment">
       <div class="comment_input">
-        <input type="text" size="30" name="message" id="add_comment_<?php echo $blogEntry->getId(); ?>"/>
+        <input type="text" size="30" name="message" id="add_comment_<?php echo $blogEntry->getId(); ?>">
       </div>
       <div>
         <button class="add_comment_button" onclick="addComment('<?php echo $blogEntry->getId(); ?>')">Kommentieren</button>
