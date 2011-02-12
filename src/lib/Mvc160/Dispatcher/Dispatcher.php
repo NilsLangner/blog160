@@ -2,25 +2,48 @@
 
 namespace Mvc160\Dispatcher;
 
+
+use Mvc160\View\View;
 use Mvc160\Route\Route;
+use Mvc160\Database\Database;
 
 class Dispatcher
 {
   private $route;
+  private $applicationRootDir;
   
-  public function __construct(Route $route)
+  private $database;
+  
+  public function __construct(Route $route, Database $database, $applicationRootDir)
   {
     $this->route = $route;
+    $this->database = $database;
+    $this->applicationRootDir = $applicationRootDir;
   }
   
   public function render()
   {
-    $moduleClassName = $this->getModuleClassName();
+    $moduleClassName = $this->getControllerClassName();
     $actionFunction = $this->getActionFunctioName();
     
-    $module = new $moduleClassName();
+    $module = new $moduleClassName($this->database);
     
-    $module->$actionFunction($this->route->getParameter());
+    $view = new View();
+    $view->setTemplateBaseDir($this->getTemplateBaseDir());
+    $view->setTemplate($this->getTemplate());
+    $processedView = $module->$actionFunction($view, $this->route->getParameter());
+    
+    echo $processedView->getContent();
+  }
+  
+  private function getTemplate()
+  {
+    return $this->route->getController().'/'.$this->route->getAction().'.php';
+  }
+  
+  private function getTemplateBaseDir()
+  {
+    return $this->applicationRootDir.'/View/';
   }
   
   private function getActionFunctioName()
@@ -28,8 +51,9 @@ class Dispatcher
     return 'action' . $this->route->getAction();
   }
   
-  private function getModuleClassName()
+  private function getControllerClassName()
   {
-    return $this->route->getApplicationName() . '\\Modules\\' . $this->route->getModule() . '\\' . $this->route->getModule();
+    return $this->route->getApplicationName() . '\\Controller\\' . $this->route->getController() . '\\' . 
+    $this->route->getController();
   }
 }

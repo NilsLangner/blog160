@@ -6,11 +6,11 @@ class Request implements Route
 {
   private $request;
   
-  private $action;
-  private $module;
+  private $action = 'Index';
+  private $controller = 'Page404';
   private $parameters = array ();
   
-  private $applicationName;
+  private $applicationName = 'Mvc160';
   
   public function __construct($request, $applicationName)
   {
@@ -21,9 +21,9 @@ class Request implements Route
   
   private function init()
   {
-    if (array_key_exists('module', $this->request))
+    if (array_key_exists('controller', $this->request))
     {
-      $this->module = $this->request ['module'];
+      $this->controller = $this->request ['controller'];
     }
     if (array_key_exists('action', $this->request))
     {
@@ -48,9 +48,9 @@ class Request implements Route
   /**
    * 
    */
-  public function getModule()
+  public function getController()
   {
-    return $this->module;
+    return $this->controller;
   }
   
   /**
