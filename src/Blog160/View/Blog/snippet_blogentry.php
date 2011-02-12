@@ -1,5 +1,6 @@
 <div class="entry_date"><?php echo htmlentities(date('Y-d-m', strtotime($blogEntry->getDate()))); ?></div>
 <div class="entry_message"><?php echo htmlentities($blogEntry->getMessage()); ?></div>
+
 <div class="entry_comments">
 
   <div class="add_comment">
@@ -20,4 +21,5 @@
     </div>
   <?php endforeach; ?>
   </div>
+  
 </div>
