@@ -44,7 +44,7 @@ class Request implements Route
    * 
    * @var string
    */
-  private $applicationName = 'Mvc160';
+  private $applicationName;
   
   /**
    * @param array $request The request to be handled (e.g. $_REQUEST)
@@ -52,7 +52,7 @@ class Request implements Route
    * @param string $standardController
    * @param string $standardAction
    */
-  public function __construct($request, $applicationName, $standardController, $standardAction)
+  public function __construct(array $request, $applicationName, $standardController = '', $standardAction = '')
   {
     $this->applicationName = $applicationName;
     $this->controller = $standardController;
