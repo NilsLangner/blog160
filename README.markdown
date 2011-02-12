@@ -1,5 +1,9 @@
 #Blog160
 
+Bei blog160 handelt es sich um ein "Spaßprojekt". Aufgabe war es eine Kombination aus Twitter und Blogsystem zu bauen. Dabei durfte kein existierendes PHP-Framework verwendet werden. Hinzufügen von Kommentaren und Blogeinträgen sollte über JavaScript funktionieren.
+
+Wäre die Einschränkung der Nichtverwendung eines PHP-Frameworks nicht gewesen, so wäre dieses Projekt in einer sehr kurzen Zeit mit Hilfe von z.B. Symfony2 und Doctrine2 umzusetzen.
+
 #Installation
 Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach muss in der index.php die Passwörter für die Datenbank korrekt gesetzt werden. Danach sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das htdocs Verzeichnis zeigt.
 
@@ -10,7 +14,7 @@ Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstrich
 
 * Datenbank-Abstraktion: Bedingung bei diesem Projekt war, dass keine existierende PHP-Bibliothek verwendet werden sollte. Aus diesem Grund wurde das Active-Record-Pattern für die Datenbank gewählt, da es relativ einfach implementiert werden kann. Bei Produktiv-Projekten sollte ein professionelles System wie Doctrine2 verwendet werden. 
 
-* Dieses Projekt wurde als "rapid prototype" umgesetzt. Unit Tests **müssen** nachgereicht werden. Da die Zeit leider nicht gereicht hat wurde nur eine Klasse als Beispielimplementierung getestet, um das System zu verdeutlichen. Bei der Implementation wurde darauf geachtet, dass keine statischen Methoden, Singletons oder globale Variablen verwendet wurden, um die Testbarkeit herzustellen. In den meisten Fällen wurden Abhängigkeiten über dependency injection gelöst.
+* Dieses Projekt wurde als "rapid prototype" umgesetzt. Unit Tests **müssen** nachgereicht werden. Da die Zeit leider nicht gereicht hat wurde nur eine Klasse als Beispielimplementierung getestet, um das System zu verdeutlichen. Bei der Implementation wurde darauf geachtet, dass keine statischen Methoden, Singletons oder globale Variablen verwendet wurden, um die Testbarkeit sicherzustellen. In fast allen Fällen wurden Abhängigkeiten über dependency injection gelöst.
 
 * Trennung der Applikation: Ich habe versucht die Applikation in zwei Teile aufzuteilen. Damit sollte eine Trennung zwischen eigentlicher Applikation und dem MVC-Framework hergestellt werden. Mvc160 befindet sich im Bibliotheken-Verzeichnis `lib`. Die eigentliche Applikation befindet sich direkt im `source` Verzeichnis. Der Mvc160-Part sollte in ein separates Repository überführt werden.
 
