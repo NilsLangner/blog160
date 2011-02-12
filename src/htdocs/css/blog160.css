@@ -8,8 +8,31 @@ body {
 	margin: 20px;
 }
 
-#blog #add_entry {
+#blog .comment_input {
+	float: left;
+}
+
+.comment_error {
+	margin-left: 98px;
 	color: red;
+	line-height: 18px;
+}
+
+#blog .add_comment_button {
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+#blog .comment {
+	margin-bottom: 10px;
+}
+
+#blog .comment_date {
+	padding-right: 10px;
+	color: #AAAAAA;
+}
+
+#blog #add_entry {
 	border-color: #5A5757;
 	border-width: 1px;
 	border-style: solid;
@@ -18,8 +41,18 @@ body {
 	margin-bottom: 30px;
 }
 
+#blog #add_entry_message {
+	float: left;
+}
+
+#blog #add_entry_button {
+	padding-bottom: 15px;
+	padding-top: 5px;	
+}
+
 #blog #add_entry input {
 	margin-left: 20px;
+	margin-right: 20px;
 }
 
 #blog #entries {
@@ -29,6 +62,11 @@ body {
 	width: 500px;
 	padding: 20px;
 	margin-bottom: 30px;
+}
+
+#blog #error_entry {
+	color: red;
+	margin-left: 140px;
 }
 
 #blog .entry_date {

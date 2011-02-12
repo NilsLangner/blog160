@@ -43,6 +43,11 @@ class Comment extends DatabaseModel
     $this->vars['blog_entry_id'] = $blogEntryId;
   }
   
+  public function getBlogEntryId( )
+  {
+    return $this->vars['blog_entry_id'];
+  }
+  
   public function getAllByBlogEntry( BlogEntry $blogEntry )
   {
     return $this->query('SELECT * FROM comments WHERE blog_entry_id = '.$blogEntry->getId().' ORDER BY id DESC' );

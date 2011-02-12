@@ -1,1 +1,1 @@
-Error
+Der neue Eintrag muss aus zwischen 1 und 160 Zeichen bestehen.

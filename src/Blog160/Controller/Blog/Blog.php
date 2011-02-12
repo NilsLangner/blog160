@@ -2,12 +2,14 @@
 
 namespace Blog160\Controller\Blog;
 
+use Mvc160\View\Json;
+use Mvc160\View\View;
+
 use Blog160\Model\Blog\Comment;
 use Blog160\Model\Blog\BlogEntry;
 
 use Mvc160\Database\Database;
 use Mvc160\Controller\Controller;
-use Mvc160\View\View;
 
 /**
  * This controller is used to handle blog entries and comments
@@ -46,12 +48,16 @@ class Blog implements Controller
       $comment->setBlogEntryId($parameters['blog_entry_id']); 
       $comment->setDate(date('Y-m-d H:i:s'));    
       $comment->store();
+      
+      $view->setVar( 'comment', $comment );
+      $status = Json::STATUS_SUCCESS;
     }
     else
     {
+      $status = Json::STATUS_FAILED;
       $view->setTemplate('Blog\AddCommentFailure.php');
     }
-    return $view;
+    return new Json($view, $status);
   }
   
   /**
@@ -71,13 +77,16 @@ class Blog implements Controller
       $blogEntry->setDate(date('Y-m-d H:i:s'));
       $blogEntry->store();
       $view->setVar('blogEntry', $blogEntry);
+      $view->setVar('comments', array( $blogEntry->getId() => array()));
+      $status = Json::STATUS_SUCCESS;
     }
     else
     {
       $view->setTemplate('Blog\AddEntryFailure.php');
+      $status = Json::STATUS_FAILED;
     }
     
-    return $view;
+    return new Json($view, $status);
   }
   
   /**

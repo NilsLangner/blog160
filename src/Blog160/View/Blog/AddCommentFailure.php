@@ -1,1 +1,1 @@
-Fehler
+Kommentare m&uuml;ssen eine L&auml;nge zwischen 1 und 160 Zeichen haben.

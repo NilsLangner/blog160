@@ -2,18 +2,21 @@
   <head>
     <title>blog160 - Ein Projekt von Nils Langner</title>
     <link type="text/css" rel="stylesheet" href="/css/blog160.css"/> 
+    <script type="text/javascript" src="/js/jquery/jquery-1.5.min.js"></script>
+    <script type="text/javascript" src="/js/blog160.js"></script>
   </head>
   <body>
   
     <div id="blog">
     
       <div id="add_entry">
-        <form action="?controller=Blog&action=addEntry" method="post">
-          Eintrag hinzuf&uuml;gen<input type="text" name="message" />
-          <input type="submit" />
-        </form>
+          <div id="add_entry_message">
+            Eintrag hinzuf&uuml;gen<input type="text" name="message" id="blog_entry" />
+          </div>
+          <button onclick="addEntry()">Eintrag erstellen</button>
+          <div id="error_entry"></div>
       </div>
-    
+      
       <div id="entries">
         <?php foreach ( $blogEntries as $blogEntry ): ?>
           <div class="entry">
@@ -21,7 +24,7 @@
           </div>
         <?php endforeach; ?>
       </div>
-      
+    
     </div>
   </body>
 </html>

@@ -2,8 +2,7 @@
 
 namespace Mvc160\Dispatcher;
 
-
-use Mvc160\View\View;
+use Mvc160\View\Html;
 use Mvc160\Route\Route;
 use Mvc160\Database\Database;
 
@@ -28,7 +27,7 @@ class Dispatcher
     
     $module = new $moduleClassName($this->database);
     
-    $view = new View();
+    $view = new Html();
     $view->setTemplateBaseDir($this->getTemplateBaseDir());
     $view->setTemplate($this->getTemplate());
     $processedView = $module->$actionFunction($view, $this->route->getParameter());
