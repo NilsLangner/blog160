@@ -18,4 +18,4 @@ Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstrich
 
 * Trennung der Applikation: Ich habe versucht die Applikation in zwei Teile aufzuteilen. Damit sollte eine Trennung zwischen eigentlicher Applikation und dem MVC-Framework hergestellt werden. Mvc160 befindet sich im Bibliotheken-Verzeichnis `lib`. Die eigentliche Applikation befindet sich direkt im `source` Verzeichnis. Der Mvc160-Part sollte in ein separates Repository überführt werden.
 
-*Konfiguration: Derzeit wird die Konfiguration direkt in der Index.php gelöst (DB-Connection). Dies sollte in ein Config-File ausgelagert werden.
+* Konfiguration: Derzeit wird die Konfiguration direkt in der Index.php gelöst (DB-Connection). Dies sollte in ein Config-File ausgelagert werden.
