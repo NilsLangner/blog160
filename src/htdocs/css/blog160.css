@@ -1,0 +1,55 @@
+body {
+	font-family: verdana;
+	font-size: 12px;
+	color: #5A5757;
+}
+
+#blog {
+	margin: 20px;
+}
+
+#blog #add_entry {
+	color: red;
+	border-color: #5A5757;
+	border-width: 1px;
+	border-style: solid;
+	width: 500px;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+#blog #add_entry input {
+	margin-left: 20px;
+}
+
+#blog #entries {
+	border-color: #5A5757;
+	border-width: 1px;
+	border-style: solid;
+	width: 500px;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+#blog .entry_date {
+	float: left;
+	padding-right: 20px;
+	color: #AAAAAA;
+}
+
+#blog .entry {
+	padding-bottom: 20px;
+}
+
+#blog .entry_comments {
+	padding-top: 10px;
+}
+
+#blog .comment_date {
+	float: left;
+	padding-left: 93px;
+}
+
+#blog .add_comment {
+	padding-left: 93px;
+}
