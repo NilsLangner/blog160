@@ -6,17 +6,23 @@ class Request implements Route
 {
   private $request;
   
-  private $action = 'Index';
-  private $controller = 'Page404';
+  private $action;
+  private $controller;
   private $parameters = array ();
   
   private $applicationName = 'Mvc160';
   
-  public function __construct($request, $applicationName)
+  public function __construct($request, $applicationName, $standardController, $standardAction)
   {
     $this->applicationName = $applicationName;
+    $this->controller = $standardController;
+    $this->action = $standardAction;
     $this->request = $request;
     $this->init();
+  }
+  
+  public function setStandardAction( )
+  {
   }
   
   private function init()

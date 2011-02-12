@@ -8,7 +8,7 @@ include_once '../Blog160/bootstrap.php';
 
 $applicationBaseDir = __DIR__.'/../Blog160';
 
-$route = new Request($_REQUEST, 'Blog160');
+$route = new Request($_REQUEST, 'Blog160', 'Blog', 'ShowAll');
 
 $database = new Database('root', '', 'blog160', 'localhost' );
 
