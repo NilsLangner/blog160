@@ -1,11 +1,11 @@
 #Blog160
 
-Bei blog160 handelt es sich um ein "Spaßprojekt". Aufgabe war es eine Kombination aus Twitter und Blogsystem zu bauen. Dabei durfte kein existierendes PHP-Framework verwendet werden. Hinzufügen von Kommentaren und Blogeinträgen sollte über JavaScript funktionieren.
+Bei blog160 handelt es sich um ein "Spaßprojekt". Aufgabe war es eine Kombination aus Twitter und Blogsystem zu bauen. Dabei durfte kein existierendes PHP-Framework verwendet werden. Das Hinzufügen von Kommentaren und Blogeinträgen sollte über JavaScript funktionieren. Darüber hinaus habe ich mir die Einschränkung gesetzt, das Projekt innerhalb eines Arbeitstages fertig zu stellen.
 
-Wäre die Einschränkung der Nichtverwendung eines PHP-Frameworks nicht gewesen, so wäre dieses Projekt in einer sehr kurzen Zeit mit Hilfe von z.B. Symfony2 und Doctrine2 umzusetzen.
+Wäre die Einschränkung der Nichtverwendung eines PHP-Frameworks nicht gewesen, so wäre dieses Projekt in einer sehr kurzen Zeit mit Hilfe von z.B. Symfony2 und Doctrine2 umzusetzen gewesen.
 
 #Installation
-Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach muss in der index.php die Passwörter für die Datenbank korrekt gesetzt werden. Danach sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das htdocs Verzeichnis zeigt. Das System benötigt eine MySQL-Datenbank und PHP 5.3.
+Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach muss in der index.php die Passwörter für die Datenbank korrekt gesetzt werden. Anschließend sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das htdocs Verzeichnis zeigt. Das System benötigt eine MySQL-Datenbank und PHP 5.3.
 
 #Potential
 Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstriche gemacht werden mussten. Ich habe versucht Dinge so zu implementieren, dass alle möglichen Verbesserungen noch "ohne" Umbau der Applikation zu integrieren sind. Einige Punkte, die für einen produktiven Einsatz dieser Software sind im folgenden Abschnitt aufgezählt:
