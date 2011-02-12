@@ -13,4 +13,4 @@ $route = new Request($_REQUEST, 'Blog160', 'Blog', 'ShowAll');
 $database = new Database('root', '', 'blog160', 'localhost' );
 
 $dispatcher = new Dispatcher($route, $database, __DIR__.'/../Blog160/');
-$dispatcher->render();
+echo $dispatcher->render();

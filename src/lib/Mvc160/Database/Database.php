@@ -2,45 +2,80 @@
 
 namespace Mvc160\Database;
 
+/**
+ * The database abstraction. This is a very simple class to handle database queries. In a live 
+ * system Doctrine2 should be considered to use.
+ * 
+ * @author Nils Langner
+ */
 class Database
-{
-  private $user;
-  private $password;
-  private $database;
-  private $host;
-  
-  private $ressource;
+{ 
+  /**
+   * The database connection link identifier
+   * 
+   * @var resource
+   */
   private $linkIdentifier;
   
+  /**
+   * Connect to the database server
+   * 
+   * @param string $user
+   * @param string $password
+   * @param string $database
+   * @param string $host
+   */
   public function __construct($user, $password, $database, $host)
   {
-    $this->user = $user;
-    $this->password = $password;
-    $this->database = $database;
-    $this->host = $host;
-    
-    $this->connect();
+    $this->connect($user, $password, $database, $host);
   }
   
-  private function connect()
+  /**
+   * This function connects to the database. All connection parameters are deleted after use because
+   * of security issues.
+   * 
+   * @param string $user
+   * @param string $password
+   * @param string $database
+   * @param string $host
+   */
+  private function connect($user, $password, $database, $host)
   {
-    $this->linkIdentifier = mysql_connect($this->host, $this->user, $this->password) or die("Keine Verbindung möglich: " . mysql_error());
-    mysql_select_db($this->database, $this->linkIdentifier);
+    $this->linkIdentifier = mysql_connect($host, $user, $password) or die("Keine Verbindung möglich: " . mysql_error());
+    mysql_select_db($database, $this->linkIdentifier);
   }
   
+  /**
+   * Use this function to fire insert statements agains the database
+   * 
+   * @param string $sqlQuery
+   * @return int the id of this object
+   */
   public function insert( $sqlQuery )
   {
      mysql_query($sqlQuery, $this->linkIdentifier);
      return mysql_insert_id();
   }
   
+  /**
+   * Use this function to fire an update statement against the database
+   * 
+   * @param string $sqlQuery
+   * @return int affected rows
+   */
   public function update( $sqlQuery )
   {
     mysql_query($sqlQuery, $this->linkIdentifier);
     return mysql_affected_rows();
   }
   
-  public function query($sqlQuery)
+  /**
+   * Use this function to fire a select statement against the database
+   * 
+   * @param string $sqlQuery
+   * @return array 
+   */
+  public function select($sqlQuery)
   {
     $result = mysql_query($sqlQuery, $this->linkIdentifier);
     
