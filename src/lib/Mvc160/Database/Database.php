@@ -8,7 +8,8 @@ namespace Mvc160\Database;
  * 
  * @todo Add error handling for connection errors
  * @todo Add error handling for mysql errors when sending a query
- * 
+ * @fixme There must be an interface for the datababse abstraction. Only this way it is possible to mock the database.  
+ *
  * @author Nils Langner
  */
 class Database
@@ -44,7 +45,7 @@ class Database
    */
   private function connect($user, $password, $database, $host)
   {
-    $this->linkIdentifier = mysql_connect($host, $user, $password) or die("Keine Verbindung möglich: " . mysql_error());
+    $this->linkIdentifier = mysql_connect($host, $user, $password) or die("Keine Verbindung mï¿½glich: " . mysql_error());
     mysql_select_db($database, $this->linkIdentifier);
   }
   
