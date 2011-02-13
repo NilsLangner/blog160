@@ -9,6 +9,8 @@ Eine Beispielinstallation ist unter zu finden: [http://blog160.phphatesme.com](h
 #Installation
 Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach müssen in der `index.php` die Passwörter für die Datenbank korrekt gesetzt werden. Anschließend sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das `htdocs`-Verzeichnis zeigt. Das System benötigt eine MySQL-Datenbank und **PHP 5.3**.
 
+Falls kein GitHub-Account existiert, so wird empfohlen den [https://github.com/NilsLangner/blog160/zipball/master](Download-Link) zu nutzen.
+
 #Potential
 Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstriche gemacht werden mussten. Ziel war es dennoch Dinge so zu implementieren, dass alle möglichen Verbesserungen "ohne" Umbau der Applikation zu integrieren sind (open closed Prinzip). Einige Punkte, die für einen produktiven Einsatz dieser Software relevant sind, aber aus Zeitmangel nicht umgesetzt werden konnten, sind im folgenden Abschnitt aufgeführt:
 
