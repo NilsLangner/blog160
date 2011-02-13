@@ -4,6 +4,8 @@ Bei blog160 handelt es sich um ein Projekt welches eine Kombination aus Twitter 
 
 Würde das Projekt ohne Einschränkungen entwickelt werden, so sollte auf ein modernes MVC-Framework, wie zum Beispiel Symfony2 und eine saubere Datenbank-Abstraktion und ORM wie Doctrine2 gesetzt werden. 
 
+Eine Beispielinstallation ist zu finden unter: (http://blog160.phphatesme.com)[http://blog160.phphatesme.com]
+
 #Installation
 Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach müssen in der `index.php` die Passwörter für die Datenbank korrekt gesetzt werden. Anschließend sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das `htdocs`-Verzeichnis zeigt. Das System benötigt eine MySQL-Datenbank und **PHP 5.3**.
 
