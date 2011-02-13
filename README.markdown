@@ -8,7 +8,7 @@ Wäre die Einschränkung der Nichtverwendung eines PHP-Frameworks nicht gewesen,
 Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach muss in der index.php die Passwörter für die Datenbank korrekt gesetzt werden. Anschließend sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das htdocs Verzeichnis zeigt. Das System benötigt eine MySQL-Datenbank und PHP 5.3.
 
 #Potential
-Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstriche gemacht werden mussten. Ich habe versucht Dinge so zu implementieren, dass alle möglichen Verbesserungen noch "ohne" Umbau der Applikation zu integrieren sind. Einige Punkte, die für einen produktiven Einsatz dieser Software sind im folgenden Abschnitt aufgezählt:
+Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstriche gemacht werden mussten. Ich habe versucht Dinge so zu implementieren, dass alle möglichen Verbesserungen noch "ohne" Umbau der Applikation zu integrieren sind. Einige Punkte, die für einen produktiven Einsatz dieser Software relevant sind, aber aus Zeitmangel nicht umgesetzt werden konnten, sind im folgenden Abschnitt aufgezählt:
 
 * Fehlerhandhabung: Derzeit ist das System kaum defensiv programmiert. Wenn man auf den vorgeschriebenen Wegen bleibt, sind Fehler abgefangen und werden dem Nutzer ausgegeben. Sollte man versuchen am System vorbei zu arbeiten, können - müssen aber nicht - Fehler/Exceptions auftreten. Ein Beispiel hierfür ist das 404 Handling, welches nicht implementiert wurde.
 
