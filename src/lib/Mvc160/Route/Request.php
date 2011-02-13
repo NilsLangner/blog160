@@ -58,6 +58,7 @@ class Request implements Route
     $this->controller = $standardController;
     $this->action = $standardAction;
     $this->request = $request;
+    
     $this->init();
   }
   
@@ -68,7 +69,8 @@ class Request implements Route
   {
     if (array_key_exists('controller', $this->request))
     {
-      $this->controller = $this->request ['controller'];
+      // used basename to not allow cross site scripting
+      $this->controller = basename($this->request ['controller']);
     }
     if (array_key_exists('action', $this->request))
     {
