@@ -43,10 +43,17 @@ img {
 	width: 500px;
 	padding: 20px;
 	margin-bottom: 30px;
+	background-color: #F9F9F9;
 }
 
 #blog #add_entry_message {
 	float: left;
+}
+
+#blog .entry_message {
+	padding-left: 95px;
+	line-height: 18px;
+	width: 200px;
 }
 
 #blog #add_entry_button {
@@ -90,6 +97,11 @@ img {
 #blog .comment_date {
 	float: left;
 	padding-left: 93px;
+}
+
+#blog .comment_message {
+	margin-left: 180px;
+	line-height: 18px;
 }
 
 #blog .add_comment {

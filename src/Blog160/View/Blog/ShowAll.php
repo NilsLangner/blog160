@@ -13,7 +13,7 @@
     
       <div id="add_entry">
           <div id="add_entry_message">
-            Eintrag hinzuf&uuml;gen<input type="text" name="message" id="blog_entry">
+            Eintrag hinzuf&uuml;gen<input type="text" name="message" id="blog_entry" size="29">
           </div>
           <button onclick="addEntry()">Eintrag erstellen</button>
           <div id="error_entry"></div>
@@ -32,6 +32,9 @@
          src="http://www.w3.org/Icons/valid-html401"
          alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
       </p>
+      <p>
+        Alle Informationen zu diesem Projekt k&ouml;nnen unter <a href="https://github.com/NilsLangner/blog160">https://github.com/NilsLangner/blog160</a> gefunden werden.
+      </p>      
     </div>
     
   </body>
