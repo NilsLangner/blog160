@@ -6,6 +6,9 @@ namespace Mvc160\Database;
  * The database abstraction. This is a very simple class to handle database queries. In a live 
  * system Doctrine2 should be considered to use.
  * 
+ * @todo Add error handling for connection errors
+ * @todo Add error handling for mysql errors when sending a query
+ * 
  * @author Nils Langner
  */
 class Database
