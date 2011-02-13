@@ -4,7 +4,9 @@ namespace Mvc160\Route;
 
 /**
  * Routes are used the map a specified url to a pair of controller, actions and parameters.
- *  
+ *
+ * @todo it must be possible to create uri out of a routing object.
+ * 
  * @author Nils Langner
  */
 interface Route
