@@ -4,6 +4,8 @@ namespace Mvc160\View;
 
 /**
  * Views are used to render templates. 
+ *
+ * @todo The view must be connected to the route to create valid uris.
  * 
  * @author Nils Langner
  */
