@@ -9,6 +9,8 @@ Eine Beispielinstallation ist unter zu finden: [http://blog160.phphatesme.com](h
 #Installation
 Um die Applikation zu installieren muss zuerst die Datenbank eingespielt werden. Die benötigten SQL-Queries befinden sich unter `sql/create.sql`. Danach müssen in der `index.php` die Passwörter für die Datenbank korrekt gesetzt werden. Anschließend sollte die Software laufen, wenn das DOCUMENT_ROOT des Servers auf das `htdocs`-Verzeichnis zeigt. Das System benötigt eine MySQL-Datenbank und **PHP 5.3**.
 
+Falls kein GitHub-Account existiert, so wird empfohlen den [Download-Link](https://github.com/NilsLangner/blog160/zipball/master) zu nutzen.
+
 #Potential
 Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstriche gemacht werden mussten. Ziel war es dennoch Dinge so zu implementieren, dass alle möglichen Verbesserungen "ohne" Umbau der Applikation zu integrieren sind (open closed Prinzip). Einige Punkte, die für einen produktiven Einsatz dieser Software relevant sind, aber aus Zeitmangel nicht umgesetzt werden konnten, sind im folgenden Abschnitt aufgeführt:
 
@@ -21,3 +23,5 @@ Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstrich
 * Trennung der Applikation: Die Applikation ist in zwei Teile aufgeteilt. Damit wurde eine Trennung zwischen eigentlicher Applikation und dem MVC-Framework hergestellt . Mvc160 befindet sich im Bibliotheken-Verzeichnis `lib`. Die eigentliche Applikation befindet sich direkt im `source`-Verzeichnis. Der Mvc160-Part sollte in ein separates Repository überführt werden.
 
 * Konfiguration: Derzeit wird die Konfiguration direkt in der index.php gelöst (DB-Connection), dies sollte in ein Config-File ausgelagert werden. Zend_Config empfiehlt sich für diesen Einsatz. 
+
+* Kleinere Änderungen mit wenig Aufwand wurden im Quellcode mit @todo notiert.
