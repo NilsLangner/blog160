@@ -10,7 +10,7 @@
       <div>
         <button class="add_comment_button" onclick="addComment('<?php echo $blogEntry->getId(); ?>')">Kommentieren</button>
       </div>
-  </div>  
+  </div>
   
   <div id="comment_error_<?php echo $blogEntry->getId(); ?>" class="comment_error"></div>
   

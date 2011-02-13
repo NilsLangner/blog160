@@ -3,5 +3,5 @@
 </div>
 
 <div class="comment_message">
-  <?php echo $comment->getMessage(); ?>
+  <?php echo htmlentities($comment->getMessage()); ?>
 </div>
