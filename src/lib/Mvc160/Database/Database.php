@@ -79,6 +79,8 @@ class Database
   {
     $result = mysql_query($sqlQuery, $this->linkIdentifier);
     
+    $rows = array( );
+    
     while ( $row = mysql_fetch_array($result, MYSQL_ASSOC) )
     {
       $rows [] = $row;

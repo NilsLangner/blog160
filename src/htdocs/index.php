@@ -6,6 +6,8 @@ use Mvc160\Dispatcher\Dispatcher;
 
 include_once '../Blog160/bootstrap.php';
 
+date_default_timezone_set('UTC');
+
 $applicationBaseDir = __DIR__.'/../Blog160';
 
 $route = new Request($_REQUEST, 'Blog160', 'Blog', 'ShowAll');

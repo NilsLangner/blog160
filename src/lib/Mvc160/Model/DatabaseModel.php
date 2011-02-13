@@ -18,7 +18,7 @@ abstract class DatabaseModel
    * 
    * @var string[]
    */
-  protected $vars = array();
+  protected $vars = array ();
   
   public function __construct(Database $database)
   {
@@ -31,13 +31,20 @@ abstract class DatabaseModel
    * @return string
    */
   abstract protected function getTableName();
- 
+  
   /**
    * Returns the id of the entity
    */
   public function getId()
   {
-    return $this->vars ['id']; 
+    if (array_key_exists('id', $this->vars))
+    {
+      return $this->vars ['id'];
+    }
+    else
+    {
+      return null;
+    }
   }
   
   /**
@@ -82,6 +89,9 @@ abstract class DatabaseModel
   {
     if (is_null($this->getId()))
     {
+      $fields = '';
+      $values = '';
+      
       foreach ( $this->vars as $key => $var )
       {
         $fields .= ', `' . mysql_escape_string($key) . '`';

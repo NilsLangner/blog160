@@ -80,7 +80,7 @@ class Dispatcher
    */
   private function getTemplateBaseDir()
   {
-    return $this->applicationRootDir.'/View/';
+    return $this->applicationRootDir.'View';
   }
   
   /**

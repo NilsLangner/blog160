@@ -55,7 +55,7 @@ class Blog implements Controller
     else
     {
       $status = Json::STATUS_FAILED;
-      $view->setTemplate('Blog\AddCommentFailure.php');
+      $view->setTemplate('Blog'.DIRECTORY_SEPARATOR.'AddCommentFailure.php');
     }
     return new Json($view, $status);
   }
@@ -82,7 +82,7 @@ class Blog implements Controller
     }
     else
     {
-      $view->setTemplate('Blog\AddEntryFailure.php');
+      $view->setTemplate('Blog'.DIRECTORY_SEPARATOR.'AddEntryFailure.php');
       $status = Json::STATUS_FAILED;
     }
     

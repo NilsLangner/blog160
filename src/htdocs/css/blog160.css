@@ -4,6 +4,10 @@ body {
 	color: #5A5757;
 }
 
+img {
+	border-style: none;
+}
+
 #blog {
 	margin: 20px;
 }
