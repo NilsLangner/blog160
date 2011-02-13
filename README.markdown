@@ -23,3 +23,5 @@ Dieses Projekt war auf einen Arbeitstag beschränkt, was bedeutet, dass Abstrich
 * Trennung der Applikation: Die Applikation ist in zwei Teile aufgeteilt. Damit wurde eine Trennung zwischen eigentlicher Applikation und dem MVC-Framework hergestellt . Mvc160 befindet sich im Bibliotheken-Verzeichnis `lib`. Die eigentliche Applikation befindet sich direkt im `source`-Verzeichnis. Der Mvc160-Part sollte in ein separates Repository überführt werden.
 
 * Konfiguration: Derzeit wird die Konfiguration direkt in der index.php gelöst (DB-Connection), dies sollte in ein Config-File ausgelagert werden. Zend_Config empfiehlt sich für diesen Einsatz. 
+
+* Kleinere Änderungen mit wenig Aufwand wurden im Quellcode mit @todo notiert.
