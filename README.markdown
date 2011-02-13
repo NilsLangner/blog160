@@ -1,6 +1,6 @@
 #Blog160
 
-Bei blog160 handelt es sich um ein Projekt welches eine Kombination aus Twitter und Blogsystem darstellen soll. Hierfür durfte kein existierendes PHP-Framework verwendet werden. Das Hinzufügen von Kommentaren und Blogeinträgen sollte über JavaScript funktionieren. Darüber hinaus wurde die Entwicklung zeitlich auf einen Arbeitstag begrenzt.
+Bei blog160 handelt es sich um ein Projekt, welches eine Kombination aus Twitter und Blogsystem darstellen soll. Hierfür durfte kein existierendes PHP-Framework verwendet werden. Das Hinzufügen von Kommentaren und Blogeinträgen sollte über JavaScript funktionieren. Darüber hinaus wurde die Entwicklung zeitlich auf einen Arbeitstag begrenzt.
 
 Würde das Projekt ohne Einschränkungen entwickelt werden, so sollte auf ein modernes MVC-Framework, wie zum Beispiel Symfony2 und eine saubere Datenbank-Abstraktion und ORM wie Doctrine2 gesetzt werden. 
 
